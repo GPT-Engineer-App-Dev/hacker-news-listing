@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Container, Heading, Link, Spinner, Text, VStack, HStack } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const HackerNews = () => {
   const [stories, setStories] = useState([]);
@@ -40,7 +40,7 @@ const HackerNews = () => {
           {stories.map((story) => (
             <Box key={story.id} p={4} borderWidth="1px" borderRadius="md">
               <Link href={story.url} isExternal fontSize="xl" fontWeight="bold">
-                {story.title} <ExternalLinkIcon mx="2px" />
+                {story.title} <FaExternalLinkAlt mx="2px" />
               </Link>
               <HStack justifyContent="space-between" mt={2}>
                 <Text>by {story.by}</Text>
